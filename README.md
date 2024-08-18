@@ -18,5 +18,5 @@ helm repo add chartmuseum-local http://localhost:8150
 Adjust the "version" field in the Chart.yaml file
 
 ```
-helm cm-push kubernetes-app/ chartmuseum-local
+helm cm-push kubernetes-app/ --version=${CHART_VERSION} --app-version=${APP_VERSION} chartmuseum-local
 ```
